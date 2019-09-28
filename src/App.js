@@ -41,7 +41,7 @@ function App() {
       
       */}
 
-      <Counter />
+      <Counter count={123} step={2}/>
     </main>
   );
 }

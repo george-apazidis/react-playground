@@ -1,12 +1,25 @@
 import React from "react";
 
 class Counter extends React.Component {
-  state = {
-    count: 0
+  constructor(props) {
+    console.log("props in constructor", props);
+    super(props);
+    this.state = {
+      count: 0,
+      step: props.step
+    };
+  }
+
+  // Set default props
+  static defaultProps = {
+    step: 1
   };
 
+  // use arrow function to bind 'this'  " = () => {"
   handleButtonClick = () => {
-    const newCount = this.state.count + 1;
+    console.log("props in handleButtonClick", this.props);
+    console.log("state in handleButtonClick", this.state);
+    const newCount = this.state.count + this.state.step;
     this.setState({
       count: newCount
     });
