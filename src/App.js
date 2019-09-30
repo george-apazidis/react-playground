@@ -1,20 +1,20 @@
 import React from "react";
 import "./App.css";
-import Tabs from "./state/Tabs";
+import Accordian from "./state-drills/Accordian";
 
-const tabsProp = [
+const sectionsArr = [
   {
-    name: "First tab",
+    title: "Section 1",
     content:
       "1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque."
   },
   {
-    name: "Second tab",
+    title: "Section 2",
     content:
       "2. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
   {
-    name: "Third tab",
+    title: "Section 3",
     content:
       "3. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur."
   }
@@ -24,7 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Tabs tabs={tabsProp} />
+        <Accordian sections={sectionsArr} />
       </div>
     );
   }
